@@ -1,10 +1,8 @@
-# Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
-import random
-n = random.randint(10, 99)
-print(f'{n} - случайно загаданное число')
-second_number = n % 10
-first_number = (n-second_number)/10
-if first_number > second_number:
-    print(f'{first_number} - наибольшая цифра в числе')
+# Удалить вторую цифру трёхзначного числа
+a = int(input("Трехзначное число = "))
+if 99 < a < 1000:
+    x = a//100
+    y = a % 10
+    print(x*10+y)
 else:
-    print(f'{second_number} - наибольшая цифра в числе')
+    print("Число не трехзначное")
